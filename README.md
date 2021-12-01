@@ -43,7 +43,7 @@
 |   └── Transfer_Learning_Models.ipynb
 ├── Saved_Models
 ├── .gitignore                              <- file specifying files/directories to ignore
-├── Project_Main_Notebook.ipynb             <- notebook detailing the data science process containing code and narrative
+├── Project_Main_Notebook.ipynb             <- main notebook of the project
 ├── README.md                               <- README file
 └── presentation.pdf                        <- presentation slides
 
