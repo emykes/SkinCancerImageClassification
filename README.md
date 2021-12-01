@@ -28,13 +28,13 @@
 
 ## Information
 
-
+Check out the [main notebook](https://github.com/emykes/SkinCancerImageClassification/blob/main/Project_Main_Notebook.ipynb) for a detailed discussion of the project, as well as the [presentation](https://github.com/emykes/SkinCancerImageClassification/blob/main/Presentation.pdf).
 
 ## Repository Structure
 
 ```
 
-├──Environment                              <- folder containing environment and requiremets info for reproducibility
+├──Environment                              <- folder containing environment requirements info for reproducibility
 │   ├── environment.yml
 │   └── requirements.txt
 │
@@ -47,6 +47,6 @@
 ├── .gitignore                              <- file specifying files/directories to ignore
 ├── Project_Main_Notebook.ipynb             <- main notebook of the project
 ├── README.md                               <- README file
-└── presentation.pdf                        <- presentation slides
+└── Presentation.pdf                        <- presentation slides
 
 ``` 
