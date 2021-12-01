@@ -1,23 +1,18 @@
 # Skin Cancer Image Classification
 
 
-## Overview
+## Project Overview
 
 
 
-## Business Understanding
+## Data Overview
+
+
+## Methodology
 
 
 
-## Data Understanding
-
-
-
-## Modeling
-
-
-
-## Evaluation
+## Results
 
 
 
@@ -28,7 +23,7 @@
 
 ## Information
 
-Check out the [main notebook](https://github.com/emykes/SkinCancerImageClassification/blob/main/Project_Main_Notebook.ipynb) for a detailed discussion of the project, as well as the [presentation](https://github.com/emykes/SkinCancerImageClassification/blob/main/Presentation.pdf).
+Check out the [main notebook](https://github.com/emykes/SkinCancerImageClassification/blob/main/Project_Main_Notebook.ipynb) for a detailed discussion of this project, as well as the [presentation](https://github.com/emykes/SkinCancerImageClassification/blob/main/Presentation.pdf).
 
 ## Repository Structure
 
