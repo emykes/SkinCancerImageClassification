@@ -1,8 +1,8 @@
-# Skin Cancer Image Classification
+cd # Skin Cancer Image Classification
 ![Image](Images/image_stats.jpg)
 
 ## Project Overview
-According to [American Academy of Dermatology](https://www.aad.org/media/stats-skin-cancer), skin cancer is the most commonly diagnosed cancer in the United States. Almost 9,500 people in US are diagnosed with skin cancer everyday, and it is estimated that 20% of the Americans will develop skin cancer in their lifetime. The vast mojority of the skin cancer deaths are from melanoma.  However, if the melanoma is detected and treated early, before it spreads to lymph nodes, 5-years survival rate is as high as 99%. This indicates the importance of early diagnosis of melanoma for skin cancer patients.
+According to [American Academy of Dermatology](https://www.aad.org/media/stats-skin-cancer), skin cancer is the most commonly diagnosed cancer in the United States. Almost 9,500 people in US are diagnosed with skin cancer everyday, and it is estimated that 20% of the Americans will develop skin cancer in their lifetime. The vast majority of the skin cancer deaths are from melanoma.  However, if the melanoma is detected and treated early, before it spreads to lymph nodes, 5-years survival rate is as high as 99%. This indicates the importance of early diagnosis of melanoma for skin cancer patients.
 
 On the other hand, the number of unnecessary biopsies for melanoma detection varies between 83% to 96% according to [Assessment of Raman Spectroscopy for Reducing Unnecessary Biopsies for Melanoma Screening](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7355922/) article. These unnecessary biopsies challenges both patients and healthcare system financially. It is important to improve the accuracy of melanoma diagnosis to reduce this financial burden. 
 
@@ -16,6 +16,7 @@ In this project **12,436** dermoscopic images are gathered from from [ISIC archi
 
 ![Benigng](Images/Benign_Sample.png)
 
+Since all the neural network models in this project are run on a local computer, in order to reduce preprocessing time the 512x512 resized images are used in the final dataset. Resized image sources are from Kaggle Grandmaster Chris Deotte's website: [1](https://www.kaggle.com/cdeotte/jpeg-melanoma-512x512?select=train.csv), [2](https://www.kaggle.com/cdeotte/jpeg-isic2019-512x512), [3](https://www.kaggle.com/c/siim-isic-melanoma-classification/discussion/169139).
 
 ## Methodology
 ImageDataGenerator is used to normalize RGB values of each image and all images will be resized into 64x64 image size as a preprocessing step. In the modeling part, I started baseline with multi-layer perceptron, and then trained various CNNs by trying to hypertune the model to get best accuracy and recall score. The CNN modeling iterations are showed explicitly in the [Image_Processing_and_Modeling](https://github.com/emykes/SkinCancerImageClassification/blob/main/Notebooks/Image_Processing_and_Modeling.ipynb) notebook. In order to implement CNN models to skin lesions dataset, Flatiron school's [CNN codealong notebook](https://github.com/learn-co-curriculum/dsc-convolutional-neural-networks-codealong) is used as a reference.
@@ -33,14 +34,16 @@ The final CNN model has 3 Convolution layers with 32, 64 and 128 nodes on each, 
 
 ## Conclusions
 
-I recommend that the final model can be used as a decision support tool by dermatologists and/or medical professionals as a part of their clinical diagnosis. 
+The final model has 91% accuracy and 90% recall scores. I recommend that this final model can be used as a decision support tool by dermatologists and/or medical professionals as a part of their clinical diagnosis. Using this tool can help medical professionals to classify 92% of the benign lesions and 91% of the malignant lesions correctly. This model can be deployed as an app for medical professionals to check whether patient's skin lesions is melanoma or not. This app can be used as a first step of the melanoma diagnosis, and can help reducing the unnecessary biopsies. 
 
 As a next step, I would like to insert metadata information along with desmoscopic images into the CNN modeling in order to increase overall scores of the model, since according to one recent research article, called [Deep Learning Classifier with Patient’s Metadata of Dermoscopic Images in Malignant Melanoma Detection](https://www.dovepress.com/deep-learning-classifier-with-patientrsquos-metadata-of-dermoscopic-im-peer-reviewed-fulltext-article-JMDH), CNN model which includes both image and metadata can increase the accuracy of classification in malignant melanoma detection even with limited data. I also would like to remove any sticker, ruler, or hair from the dermoscopic images so that model only focusses on the lesions not any other possible disturbances.
 
 
-## Information
+## Setup Information
 
-Check out the [main notebook](https://github.com/emykes/SkinCancerImageClassification/blob/main/Project_Main_Notebook.ipynb) for a detailed discussion of this project, as well as the [presentation](https://github.com/emykes/SkinCancerImageClassification/blob/main/Presentation.pdf). All the Python codes are run on a local computer with the environment info given in the [Environment](https://github.com/emykes/SkinCancerImageClassification/tree/main/Environment) folder.
+All the Python codes are run on a local computer with the environment info given in the [Environment](https://github.com/emykes/SkinCancerImageClassification/tree/main/Environment) folder. If the images and metadata sets are downloaded from the following links, [link-1](https://www.kaggle.com/cdeotte/jpeg-melanoma-512x512?select=train.csv), [link-2](https://www.kaggle.com/cdeotte/jpeg-isic2019-512x512), [link-3](https://www.kaggle.com/c/siim-isic-melanoma-classification/discussion/169139), and steps described in the [Data_Exploration](https://github.com/emykes/SkinCancerImageClassification/blob/main/Notebooks/Data_Exploration.ipynb) notebook followed, the same results can easily be reproduced . 
+
+Check out the [main notebook](https://github.com/emykes/SkinCancerImageClassification/blob/main/Project_Main_Notebook.ipynb) for a detailed discussion of this project, as well as the [presentation](https://github.com/emykes/SkinCancerImageClassification/blob/main/Presentation.pdf). 
 
 ## Repository Structure
 
