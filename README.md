@@ -1,4 +1,4 @@
-cd # Skin Cancer Image Classification
+# Skin Cancer Image Classification
 ![Image](Images/image_stats.jpg)
 
 ## Project Overview
