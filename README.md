@@ -2,16 +2,15 @@
 ![Image](Images/image_stats.jpg)
 
 ## Project Overview
-According to [American Academy of Dermatology](https://www.aad.org/media/stats-skin-cancer), skin cancer is the most commonly diagnosed cancer in the United States. Almost 9,500 people in US are diagnosed with skin cancer everyday, and it is estimated that 25% of the Americans will develop skin cancer in their lifetime. The vast mojority of the skin cancer deaths are from melanoma.  However, if the melanoma is detected and treated early, before it spreads to lymph nodes, 5-years survival rate is as high as 99%. This indicates the importance of early diagnosis of melanoma for skin cancer patients. 
+According to [American Academy of Dermatology](https://www.aad.org/media/stats-skin-cancer), skin cancer is the most commonly diagnosed cancer in the United States. Almost 9,500 people in US are diagnosed with skin cancer everyday, and it is estimated that 20% of the Americans will develop skin cancer in their lifetime. The vast mojority of the skin cancer deaths are from melanoma.  However, if the melanoma is detected and treated early, before it spreads to lymph nodes, 5-years survival rate is as high as 99%. This indicates the importance of early diagnosis of melanoma for skin cancer patients.
 
-On the other hand, the number of unnecessary biopsies for melanoma detection varies between 83% to 96% according to [Assessment of Raman Spectroscopy for Reducing Unnecessary Biopsies for Melanoma Screening](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7355922/) article. These unnecessary biopsies challenges both patients and healthcare system financially. It is important to improve the accuracy of melanoma diagnosis to reduce this financial burden.     
+On the other hand, the number of unnecessary biopsies for melanoma detection varies between 83% to 96% according to [Assessment of Raman Spectroscopy for Reducing Unnecessary Biopsies for Melanoma Screening](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7355922/) article. These unnecessary biopsies challenges both patients and healthcare system financially. It is important to improve the accuracy of melanoma diagnosis to reduce this financial burden. 
 
-The aim of this project is to use Convolutional Neural Network (CNN) to distinguish dermoscopic images of malignant skin lesions from benign lesions. In this project **12,436** dermoscopic images are gathered from from [ISIC archive](https://www.isic-archive.com/#!/topWithHeader/onlyHeaderTop/gallery?filter=%5B%5D). I have 8953 images with 4845 benign and 4108 malignant classes for training purpose, 2239 images with 1211 benign and 1028 malignant classes for validation purpose, and also I set aside test/holdout set for final evaluation which has 1244 images with 694 benign and 550 malignant classes.
-
+The aim of this project is to use Convolutional Neural Network (CNN) to distinguish dermoscopic images of malignant skin lesions from benign lesions. 
 
 ## Data Overview
 
-The data comes from the International Skin Imaging Collaboration (ISIC) archive. The archive serves as an open resource for public for teaching and research purposes. ISIC hosts challenges in order to facilitate the application of digital skin imaging to help reduce the melonoma mortality. In this project, I will use [ISIC 2020 challenge](https://challenge2020.isic-archive.com/) dataset, [ISIC 2019 challenge](https://challenge2019.isic-archive.com/) dataset, and additional new never seen before malignant images from [ISIC archive](https://www.isic-archive.com/#!/topWithHeader/onlyHeaderTop/gallery?filter=%5B%5D) to classify benign vs. malignant images. Each dataset contains dermoscopic images of unique benign and malignant skin lesions along with metadata info of patient's age, sex, and anatomic location of the lesion.
+In this project **12,436** dermoscopic images are gathered from from [ISIC archive](https://www.isic-archive.com/#!/topWithHeader/onlyHeaderTop/gallery?filter=%5B%5D). From the final dataset, 8953 images with 4845 benign and 4108 malignant classes are used for training purpose, 2239 images with 1211 benign and 1028 malignant classes are used for validation, and 1244 images are set aside as a test/holdout set for final evaluation which icludes 694 benign and 550 malignant images. Each dataset contains dermoscopic images of unique benign and malignant skin lesions along with metadata info of patient's age, sex, and anatomic location of the lesion.
 
 ![Malignant](Images/Malignant_Sample.png)
 
@@ -28,15 +27,15 @@ In the compiling part of the all modeling done in this project, I decided to use
 
 ## Results
 
-When we look at the results of the CNN evaluation and VGG16 evaluation scores, it is seen that CNN model has better accuracy and recall score compared to pre-trained VGG16 model. Therefore the final model is chosen to be  **final_CNN_model**  with 91% accuracy and 90% recall scores.
+The final CNN model has 3 Convolution layers with 32, 64 and 128 nodes on each, and an additional Dense layer with 128 nodes. All the layers have 0.001 L2 regularization parameter to overcome overfitting, and after each convolution layers BatchNormalization and Pooling layers are added to the model. 684,225 parameters are trained for this model, and final result came out to be 91% accuracy and 90% recall scores on test/hold-out set.
 
 ![Confusionmatrix](Images/final_confusion_matrix.png)
 
 ## Conclusions
 
-The final model has 91% accuracy and 90% recall scores. I recommend that this final model can be used as a decision support tool by dermatologists and/or medical professionals as a part of their clinical diagnosis. I would like to insert metadata information along with desmoscopic images into the CNN modeling in order to increase overall scores of the model, since according to one recent research called [Deep Learning Classifier with Patient’s Metadata of Dermoscopic Images in Malignant Melanoma Detection](https://www.dovepress.com/deep-learning-classifier-with-patientrsquos-metadata-of-dermoscopic-im-peer-reviewed-fulltext-article-JMDH) CNN model which includes both image and metadata can increase the accuracy of classification in malignant melanoma detection even with limited data. 
+I recommend that the final model can be used as a decision support tool by dermatologists and/or medical professionals as a part of their clinical diagnosis. 
 
-I also would like to remove any sticker, ruler, or hair from the dermoscopic images so that model only focusses on the lesions not any other possible disturbances.
+As a next step, I would like to insert metadata information along with desmoscopic images into the CNN modeling in order to increase overall scores of the model, since according to one recent research article, called [Deep Learning Classifier with Patient’s Metadata of Dermoscopic Images in Malignant Melanoma Detection](https://www.dovepress.com/deep-learning-classifier-with-patientrsquos-metadata-of-dermoscopic-im-peer-reviewed-fulltext-article-JMDH), CNN model which includes both image and metadata can increase the accuracy of classification in malignant melanoma detection even with limited data. I also would like to remove any sticker, ruler, or hair from the dermoscopic images so that model only focusses on the lesions not any other possible disturbances.
 
 
 ## Information
