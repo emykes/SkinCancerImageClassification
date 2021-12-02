@@ -30,7 +30,7 @@ In the compiling part of the all modeling done in this project, I decided to use
 
 The final CNN model has 3 Convolution layers with 32, 64 and 128 nodes on each, and an additional Dense layer with 128 nodes. All the layers have 0.001 L2 regularization parameter to overcome overfitting, and after each convolution layers BatchNormalization and Pooling layers are added to the model. 684,225 parameters are trained for this model, and final result came out to be 91% accuracy and 90% recall scores on test/hold-out set.
 
-![Confusionmatrix](Images/final_confusion_matrix.png)
+![Confusionmatrix](Images/confusion_matrix.png)
 
 ## Conclusions
 
