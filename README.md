@@ -36,24 +36,24 @@ The final CNN model has 3 Convolution layers with 32, 64 and 128 nodes on each, 
 ## Prediction Explanations
 I also used will use [LIME library](https://github.com/marcotcr/lime) to interpret test data predictions of my final CNN model to understand the reasoning behind some of the predictions and judge the reliability of the model. While there are 1138 images are predicted correctly by the final model, 106 skin lesion images are predicted incorrectly.
 
-![malignantcorrect](Images/malignant_correct2.png) ![benigncorrect](Images/benign_correct2.png)
+![benigncorrect](Images/benign_correct2.png)  ![malignantcorrect](Images/malignant_correct2.png) 
 
 
-![malignantincorrect](Images/malignant_incorrect2.png) ![benignincorrect](Images/benign_incorrect2.png)
+![benignincorrect](Images/benign_incorrect2.png)  ![malignantincorrect](Images/malignant_incorrect2.png) 
 
 
-The model predicted the class correctly if the skin lesion image did not have any extra disturbances, such as marker, ruler, or hair on the image. Clean image usage is very important for the final model predictions to get the reliable predictions. I recommend using this model only to predict the class of clean skin lesion images as as a decision support tool, in order to reduce the noise from the image so that the model focuses only on the lesion itself.
+The model predicted the class correctly if the skin lesion image did not have any extra disturbances, such as marker, ruler, or hair on the image. Clean image usage is very important for the final model predictions to get the reliable predictions. 
 
 ## Conclusions
 
-The final model has 91% accuracy and 90% recall scores. I recommend that this final model can be used as a decision support tool by dermatologists and/or medical professionals as a part of their clinical diagnosis. Using this tool can help medical professionals to classify 92% of the benign lesions and 91% of the malignant lesions correctly. This model can be deployed as an app for medical professionals to check whether patient's skin lesions is melanoma or not. This app can be used as a first step of the melanoma diagnosis, and can help reducing the unnecessary biopsies. 
+The final model has 91% accuracy and 90% recall scores. I recommend that this final model can be used as a decision support tool by dermatologists and/or medical professionals as a part of their clinical diagnosis. Using this tool can help medical professionals to classify 92% of the benign lesions and 91% of the malignant lesions correctly. The model predicts the class correctly if the skin lesion image does not have any extra disturbances, such as marker, ruler, or hair. I recommend using the model for the clean skin lesion images, in order to reduce the noise from the image so that the model focuses only on the lesion itself. This model can be deployed as an app for medical professionals to check whether patient's skin lesions is melanoma or not. This app can be used as a first step of the melanoma diagnosis, and can help reducing the unnecessary biopsies.
 
 As a next step, I would like to insert metadata information along with desmoscopic images into the CNN modeling in order to increase overall scores of the model, since according to one recent research article, called [Deep Learning Classifier with Patient’s Metadata of Dermoscopic Images in Malignant Melanoma Detection](https://www.dovepress.com/deep-learning-classifier-with-patientrsquos-metadata-of-dermoscopic-im-peer-reviewed-fulltext-article-JMDH), CNN model which includes both image and metadata can increase the accuracy of classification in malignant melanoma detection even with limited data. I also would like to remove any sticker, ruler, or hair from the dermoscopic images so that model only focusses on the lesions not any other possible disturbances.
 
 
 ## Setup Information
 
-All the Python codes are run on a local computer with the environment info given in the [Environment](https://github.com/emykes/SkinCancerImageClassification/tree/main/Environment) folder. If the images and metadata sets are downloaded from the following links, [link-1](https://www.kaggle.com/cdeotte/jpeg-melanoma-512x512?select=train.csv), [link-2](https://www.kaggle.com/cdeotte/jpeg-isic2019-512x512), [link-3](https://www.kaggle.com/c/siim-isic-melanoma-classification/discussion/169139), and steps described in the [Data_Exploration](https://github.com/emykes/SkinCancerImageClassification/blob/main/Notebooks/Data_Exploration.ipynb) notebook followed, the same results can easily be reproduced . 
+All the Python codes are run on a local computer with the environment info given in the [Environment](https://github.com/emykes/SkinCancerImageClassification/tree/main/Environment) folder. If the images and metadata are downloaded from the following links, [link-1](https://www.kaggle.com/cdeotte/jpeg-melanoma-512x512?select=train.csv), [link-2](https://www.kaggle.com/cdeotte/jpeg-isic2019-512x512), [link-3](https://www.kaggle.com/c/siim-isic-melanoma-classification/discussion/169139), and [notebooks](https://github.com/emykes/SkinCancerImageClassification/tree/main/Notebooks) are run in the same order, the results can easily be reproduced. 
 
 Check out the [main notebook](https://github.com/emykes/SkinCancerImageClassification/blob/main/Project_Main_Notebook.ipynb) for a detailed discussion of this project, as well as the [presentation](https://github.com/emykes/SkinCancerImageClassification/blob/main/Presentation.pdf). 
 
@@ -67,15 +67,15 @@ Check out the [main notebook](https://github.com/emykes/SkinCancerImageClassific
 │
 ├── Images                                  <- folder containing saved images for Main Notebook and README
 ├── Notebooks                               <- folder containing notebooks for each section of the project
-│   ├── Data_Exploration.ipynb
-│   ├── Explaining_Model_Predictions.ipynb
-│   ├── Image_Processing_and_Modeling.ipynb
-│   └── Transfer_Learning_Models.ipynb
+│   ├── 1_Data_Exploration.ipynb
+│   ├── 2_Image_Processing_and_Modeling.ipynb
+│   ├── 3_Transfer_Learning_Models.ipynb
+│   └── 4_Explaining_Model_Predictions.ipynb
 │
 ├── Saved_Models                            <- folder contaning trained model files and results 
 ├── .gitignore                              <- file specifying files/directories to ignore
+├── Presentation.pdf                        <- presentation slides
 ├── Project_Main_Notebook.ipynb             <- main notebook of the project
-├── README.md                               <- README file
-└── Presentation.pdf                        <- presentation slides
+└── README.md                               <- README file
 
 ``` 
