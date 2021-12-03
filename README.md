@@ -16,7 +16,7 @@ In this project **12,436** dermoscopic images are gathered from from [ISIC archi
 
 ![Benigng](Images/Benign_Sample.png)
 
-Since all the neural network models in this project are run on a local computer, in order to reduce preprocessing time the 512x512 resized images are used in the final dataset. Resized image sources are from Kaggle Grandmaster Chris Deotte's website: [1](https://www.kaggle.com/cdeotte/jpeg-melanoma-512x512?select=train.csv), [2](https://www.kaggle.com/cdeotte/jpeg-isic2019-512x512), [3](https://www.kaggle.com/c/siim-isic-melanoma-classification/discussion/169139).
+Since all the neural network models in this project are run on a local computer, in order to reduce preprocessing time the 512x512 resized images are used in the final dataset. Resized image sources are from Chris Deotte's Kaggle pages: [1](https://www.kaggle.com/cdeotte/jpeg-melanoma-512x512?select=train.csv), [2](https://www.kaggle.com/cdeotte/jpeg-isic2019-512x512), [3](https://www.kaggle.com/c/siim-isic-melanoma-classification/discussion/169139).
 
 ## Methodology
 ImageDataGenerator is used to normalize RGB values of each image and all images will be resized into 64x64 image size as a preprocessing step. In the modeling part, I started baseline with multi-layer perceptron, and then trained various CNNs by trying to hypertune the model to get best accuracy and recall score. The CNN modeling iterations are showed explicitly in the [Image_Processing_and_Modeling](https://github.com/emykes/SkinCancerImageClassification/blob/main/Notebooks/Image_Processing_and_Modeling.ipynb) notebook. In order to implement CNN models to skin lesions dataset, Flatiron school's [CNN codealong notebook](https://github.com/learn-co-curriculum/dsc-convolutional-neural-networks-codealong) is used as a reference.
@@ -28,9 +28,14 @@ In the compiling part of the all modeling done in this project, I decided to use
 
 ## Results
 
-The final CNN model has 3 Convolution layers with 32, 64 and 128 nodes on each, and an additional Dense layer with 128 nodes. All the layers have 0.001 L2 regularization parameter to overcome overfitting, and after each convolution layers BatchNormalization and Pooling layers are added to the model. 684,225 parameters are trained for this model, and final result came out to be 91% accuracy and 90% recall scores on test/hold-out set.
+The final CNN model has 3 Convolution layers with 32, 64 and 128 nodes on each, and an additional Dense layer with 128 nodes. All the layers have 0.001 L2 regularization parameter to overcome overfitting, and after each convolution layers BatchNormalization and Pooling layers are added to the model. 684,225 parameters are trained for this model, and final result came out with 91% accuracy and 90% recall scores on test/hold-out set.
 
 ![Confusionmatrix](Images/confusion_matrix.png)
+
+
+## Prediction Explanations
+
+
 
 ## Conclusions
 
