@@ -56,6 +56,7 @@ Check out the [main notebook](https://github.com/emykes/SkinCancerImageClassific
 ├── Images                                  <- folder containing saved images for Main Notebook and README
 ├── Notebooks                               <- folder containing notebooks for each section of the project
 │   ├── Data_Exploration.ipynb
+│   ├── Explaining_Model_Predictions.ipynb
 │   ├── Image_Processing_and_Modeling.ipynb
 │   └── Transfer_Learning_Models.ipynb
 │
