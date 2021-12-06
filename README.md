@@ -1,6 +1,8 @@
 # Skin Cancer Image Classification
 ![Image](Images/image_stats.jpg)
 
+### Author: Emine Kesici
+
 ## Project Overview
 According to [American Academy of Dermatology](https://www.aad.org/media/stats-skin-cancer), skin cancer is the most commonly diagnosed cancer in the United States. Almost 9,500 people in US are diagnosed with skin cancer everyday, and it is estimated that 20% of the Americans will develop skin cancer in their lifetime. The vast majority of the skin cancer deaths are from melanoma.  However, if the melanoma is detected and treated early, before it spreads to lymph nodes, 5-years survival rate is as high as 99%. This indicates the importance of early diagnosis of melanoma for skin cancer patients.
 
@@ -42,13 +44,13 @@ I also used will use [LIME library](https://github.com/marcotcr/lime) to interpr
 ![benignincorrect](Images/benign_incorrect2.png)  ![malignantincorrect](Images/malignant_incorrect2.png) 
 
 
-The model predicted the class correctly if the skin lesion image did not have any extra disturbances, such as marker, ruler, or hair on the image. Clean image usage is very important for the final model predictions to get the reliable predictions. 
+The model predicted the class correctly if the skin lesion image did not have any extra disturbances, such as marker, ruler, or hair on the image. Clean image usage is very important for the final model predictions to be reliable. 
 
 ## Conclusions
 
-The final model has 91% accuracy and 90% recall scores. I recommend that this final model can be used as a decision support tool by dermatologists and/or medical professionals as a part of their clinical diagnosis. Using this tool can help medical professionals to classify 92% of the benign lesions and 91% of the malignant lesions correctly. The model predicts the class correctly if the skin lesion image does not have any extra disturbances, such as marker, ruler, or hair. I recommend using the model for the clean skin lesion images, in order to reduce the noise from the image so that the model focuses only on the lesion itself. This model can be deployed as an app for medical professionals to check whether patient's skin lesions is melanoma or not. This app can be used as a first step of the melanoma diagnosis, and can help reducing the unnecessary biopsies.
+The final model has 91% accuracy and 90% recall scores. I recommend that this final model can be used as a decision support tool by dermatologists and/or medical professionals as a part of their clinical diagnosis. Using this tool can help medical professionals to classify 92% of the benign lesions and 91% of the malignant lesions correctly. The model predicts the class correctly if the skin lesion image does not have any extra disturbances, such as marker, ruler, or hair. I recommend using the model for the clean skin lesion images, in order to reduce the noise from the image so that the model focuses only on the lesion itself. This model can be deployed as an app for medical professionals to check whether patient's skin lesions is melanoma or not. This app can be used as a first step of the melanoma diagnosis, and can help to reduce the unnecessary biopsies.
 
-As a next step, I would like to insert metadata information along with desmoscopic images into the CNN modeling in order to increase overall scores of the model, since according to one recent research article, called [Deep Learning Classifier with Patient’s Metadata of Dermoscopic Images in Malignant Melanoma Detection](https://www.dovepress.com/deep-learning-classifier-with-patientrsquos-metadata-of-dermoscopic-im-peer-reviewed-fulltext-article-JMDH), CNN model which includes both image and metadata can increase the accuracy of classification in malignant melanoma detection even with limited data. I also would like to remove any sticker, ruler, or hair from the dermoscopic images so that model only focusses on the lesions not any other possible disturbances.
+As a next step, I would like to do deep learning classification by inserting metadata information along with desmoscopic images into the model in order to increase overall scores of the model. According to one recent research article, called [Deep Learning Classifier with Patient’s Metadata of Dermoscopic Images in Malignant Melanoma Detection](https://www.dovepress.com/deep-learning-classifier-with-patientrsquos-metadata-of-dermoscopic-im-peer-reviewed-fulltext-article-JMDH) CNN model which includes both image and metadata can increase the accuracy of classification in malignant melanoma detection even with limited data. I also would like to remove any sticker, ruler, or hair from the dermoscopic images so that model only focusses on the lesions itself, not any other possible disturbances.
 
 
 ## Setup Information
