@@ -36,7 +36,7 @@ The final CNN model has 3 Convolution layers with 32, 64 and 128 nodes on each, 
 
 
 ## Prediction Explanations
-I also used will use [LIME library](https://github.com/marcotcr/lime) to interpret test data predictions of my final CNN model to understand the reasoning behind some of the predictions and judge the reliability of the model. While there are 1138 images are predicted correctly by the final model, 106 skin lesion images are predicted incorrectly.
+I also used [LIME library](https://github.com/marcotcr/lime) to interpret test data predictions of my final CNN model to understand the reasoning behind some of the predictions and judge the reliability of the model. While there are 1138 images are predicted correctly by the final model, 106 skin lesion images are predicted incorrectly.
 
 ![benigncorrect](Images/benign_correct2.png)  ![malignantcorrect](Images/malignant_correct2.png) 
 
@@ -44,7 +44,7 @@ I also used will use [LIME library](https://github.com/marcotcr/lime) to interpr
 ![benignincorrect](Images/benign_incorrect2.png)  ![malignantincorrect](Images/malignant_incorrect2.png) 
 
 
-The model predicted the class correctly if the skin lesion image did not have any extra disturbances, such as marker, ruler, or hair on the image. Clean image usage is very important for the final model predictions to be reliable. 
+The model predicted the class correctly if the skin lesion image did not have any extra disturbances, such as marker, ruler, or hair on it. Clean image usage is very important for the final model predictions to be reliable. 
 
 ## Conclusions
 
