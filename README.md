@@ -1,7 +1,8 @@
 # Skin Cancer Image Classification
 ![Image](Images/image_stats.jpg)
 
-## Author: Emine Kesici
+## Author 
+Emine Kesici
 
 ## Project Overview
 According to [American Academy of Dermatology](https://www.aad.org/media/stats-skin-cancer), skin cancer is the most commonly diagnosed cancer in the United States. Almost 9,500 people in US are diagnosed with skin cancer everyday, and it is estimated that 20% of the Americans will develop skin cancer in their lifetime. The vast majority of the skin cancer deaths are from melanoma.  However, if the melanoma is detected and treated early, before it spreads to lymph nodes, 5-years survival rate is as high as 99%. This indicates the importance of early diagnosis of melanoma for skin cancer patients.
