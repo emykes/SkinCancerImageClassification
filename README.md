@@ -13,7 +13,7 @@ The aim of this project is to use Convolutional Neural Network (CNN) to distingu
 
 ## Data Overview
 
-In this project **12,436** dermoscopic images are gathered from the [ISIC archive](https://www.isic-archive.com/#!/topWithHeader/onlyHeaderTop/gallery?filter=%5B%5D). From the final dataset, 8953 images with 4845 benign and 4108 malignant classes are used for training purpose, 2239 images with 1211 benign and 1028 malignant classes are used for validation, and 1244 images are set aside as a test/holdout set for final evaluation which icludes 694 benign and 550 malignant images. Each dataset contains dermoscopic images of unique benign and malignant skin lesions along with metadata info of patient's age, sex, and anatomic location of the lesion.
+In this project **12,436** dermoscopic images are gathered from the [ISIC archive](https://www.isic-archive.com/#!/topWithHeader/onlyHeaderTop/gallery?filter=%5B%5D). From the final dataset, 8953 images with 4845 benign and 4108 malignant classes are used for training purpose, 2239 images with 1211 benign and 1028 malignant classes are used for validation, and 1244 images are set aside as a test/holdout set for final evaluation which includes 694 benign and 550 malignant images. Each dataset contains dermoscopic images of unique benign and malignant skin lesions along with metadata info of patient's age, sex, and anatomic location of the lesion.
 
 ![Malignant](Images/Malignant_Sample.png)
 
